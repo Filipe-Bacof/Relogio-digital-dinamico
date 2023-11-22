@@ -1,18 +1,21 @@
+const dias = document.getElementById('dias');
 const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
+const dataEspecifica = new Date(2023, 10, 21, 23, 0, 0);
+
 const relogio = setInterval(function time() {
-    let dateToday = new Date();
-    let hr = dateToday.getHours();
-    let min = dateToday.getMinutes();
-    let sec = dateToday.getSeconds();
+    let dataAtual = new Date();
+    let diferenca = dataAtual - dataEspecifica;
 
-    if (hr < 10) hr = '0' + hr;
-    if (min < 10) min = '0' + min;
-    if (sec < 10) sec = '0' + sec;
+    let diasPassados = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+    let horasPassadas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutosPassados = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+    let segundosPassados = Math.floor((diferenca % (1000 * 60)) / 1000);
 
-    horas.textContent = hr;
-    minutos.textContent = min;
-    segundos.textContent = sec;
-})
+    dias.textContent = diasPassados < 10 ? '0' + diasPassados : diasPassados;
+    horas.textContent = horasPassadas < 10 ? '0' + horasPassadas : horasPassadas;
+    minutos.textContent = minutosPassados < 10 ? '0' + minutosPassados : minutosPassados;
+    segundos.textContent = segundosPassados < 10 ? '0' + segundosPassados : segundosPassados;
+}, 1000);
