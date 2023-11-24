@@ -3,7 +3,7 @@ const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
-const dataEspecifica = new Date(2023, 10, 21, 23, 0, 0);
+const dataEspecifica = new Date(2023, 10, 24, 9, 0, 0);
 
 const relogio = setInterval(function time() {
     let dataAtual = new Date();

@@ -17,8 +17,18 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: #fff;
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-top: 2rem;
 }
 
 .relogio {
@@ -73,7 +83,8 @@ h2 {
   }
 
   h1,
-  h2 {
+  h2,
+  h3 {
     font-size: small;
   }
 }
