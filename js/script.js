@@ -3,7 +3,11 @@ const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
-const dataEspecifica = new Date(2023, 10, 29, 9, 20, 0);
+const dataEspecifica = new Date(2023, 11, 11, 15, 17, 0);
+// Meses no JavaScript vão do 0 até 11 (sendo 0 = janeiro e 11 = dezembro)
+
+// [15:17, 11/12/2023] Hiann: nosso sistema ja ta de volta
+// [15:21, 11/12/2023] Thiago: Amém senhor
 
 const relogio = setInterval(function time() {
     let dataAtual = new Date();
